@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Deck
 {
-    private List<Card> deck = new ArrayList<>();
+    private final List<Card> deck = new ArrayList<>();
     public Deck()
     {
         for (CardRank rank : CardRank.values()) {
@@ -26,5 +26,10 @@ public class Deck
         for (var item: deck){
             System.out.print(item + " ");
         }
+        System.out.println();
+    }
+
+    public List<Card> getDeck() {
+        return deck;
     }
 }

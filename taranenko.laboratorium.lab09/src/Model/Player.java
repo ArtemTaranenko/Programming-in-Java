@@ -8,12 +8,31 @@ public class Player
     private TreeSet<Card> Cards;
 
 
-    public Player(String Name, TreeSet<Card> Cards)
+    public Player(String Name)
     {
         this.Name = Name;
-        this.Cards = Cards;
+        this.Cards = new TreeSet<>();
     }
 
+    public void addCard(Card card)
+    {
+        Cards.add(card);
+    }
+
+    public void printCards()
+    {
+        System.out.println(Name + "cards:");
+        for (Card card: Cards)
+        {
+            System.out.print(card + " ");
+        }
+        System.out.println();
+    }
+
+    public void calculateHand()
+    {
+
+    }
 
     public String getName() {
         return Name;

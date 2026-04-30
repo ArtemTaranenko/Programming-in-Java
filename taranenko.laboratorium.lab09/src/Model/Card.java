@@ -2,8 +2,8 @@ package Model;
 
 public class Card implements Comparable<Card>
 {
-    private CardSuit cardSuit;
-    private CardRank cardRank;
+    private final CardSuit cardSuit;
+    private final CardRank cardRank;
 
 
     public Card(CardSuit cardSuit, CardRank cardRank)

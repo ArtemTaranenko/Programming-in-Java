@@ -24,4 +24,12 @@ public class Card implements Comparable<Card>
     public String toString() {
         return cardSuit + " " + cardRank;
     }
+
+    public CardSuit getCardSuit() {
+        return cardSuit;
+    }
+
+    public CardRank getCardRank() {
+        return cardRank;
+    }
 }

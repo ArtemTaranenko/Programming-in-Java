@@ -21,7 +21,7 @@ public class Player
 
     public void printCards()
     {
-        System.out.println(Name + "cards:");
+        System.out.println(Name + " cards:");
         for (Card card: Cards)
         {
             System.out.print(card + " ");

@@ -1,8 +1,10 @@
 package Controllers;
 
-import Model.Deck;
-import Model.Player;
+import Model.*;
 
+import javax.swing.text.html.StyleSheet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class GameController
@@ -57,13 +59,75 @@ public class GameController
 
     private void playFirstScenario(Deck deck, Player player1, Player player2)
     {
-        for (int i = 0; i<10; i+=2)
-        {
-            player1.addCard(deck.getDeck().get(i));
-            player2.addCard(deck.getDeck().get(i+1));
+        for (int i = 0; i < 5; i++) {
+            player1.addCard(deck.getDeck().removeFirst());
+            player2.addCard(deck.getDeck().removeFirst());
         }
         player1.printCards();
         player2.printCards();
+        exchangeCard(player1, deck);
+        exchangeCard(player2, deck);
+        CardController cardController = new CardController();
+        WinSituation win = cardController.andTheWinnerIs(player1, player2);
+        Player winner;
+        switch (win.getWin())
+        {
+            case PLAYER1:
+                winner = player1;
+                printWinner(winner);
+                break;
+            case PLAYER2:
+                winner = player2;
+                printWinner(winner);
+                break;
+            case DRAW:
+                System.out.println("DRAW!");
+        }
+        printResults(cardController, player1, player2);
+    }
+
+    private void exchangeCard(Player player, Deck deck)
+    {
+        System.out.println("Move " + player.getName());
+        System.out.println("Do you want to try your luck and exchange cards? Please, type in number of cards you want to exchange: ");
+        Scanner scanner = new Scanner(System.in);
+        int numberCards = scanner.nextInt();
+        if (numberCards != 0)
+        {
+            System.out.println("Please, indicate cards to be exchanged (from the left");
+            List<Integer> cardsIndexes = new ArrayList<>();
+            List<Card> cards = new ArrayList<>(player.getCards());
+            for (int i = 0; i < numberCards; i++) {
+                int index = scanner.nextInt();
+                cardsIndexes.add(index);
+                if (index < 1 || index > 5) {
+                    System.out.println("Invalid index");
+                    i--;
+                }
+            }
+            for (int i : cardsIndexes)
+            {
+                Card oldCard = cards.get(i-1);
+                player.getCards().remove(oldCard);
+            }
+            System.out.println("Left " + player.getName() + " cards " + player.getCards());
+            for (int i = 0; i<cardsIndexes.size(); i++) {
+                player.addCard(deck.getDeck().removeFirst());
+            }
+            System.out.println(player.getName() + " cards after exchanging " + player.getCards());
+        }
+
+    }
+
+    private void printWinner(Player winner)
+    {
+        System.out.println("The winner is: "+ winner.getName());
+    }
+
+    private void printResults(CardController cardController, Player player1, Player player2)
+    {
+        System.out.println("\n"+ player1.getName() + " result is : " + cardController.result(player1) + " " + player1.getCards());
+        System.out.println("\n"+ player2.getName() + " result is : " + cardController.result(player2) + " " + player2.getCards());
     }
 
     private void playSecondScenario(Deck deck, Player player1, Player player2)

@@ -4,6 +4,7 @@ import Model.*;
 
 import javax.swing.text.html.StyleSheet;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -67,6 +68,11 @@ public class GameController
         player2.printCards();
         exchangeCard(player1, deck);
         exchangeCard(player2, deck);
+        handleWin(player1, player2);
+    }
+
+    private void handleWin(Player player1, Player player2)
+    {
         CardController cardController = new CardController();
         WinSituation win = cardController.andTheWinnerIs(player1, player2);
         Player winner;
@@ -132,6 +138,38 @@ public class GameController
 
     private void playSecondScenario(Deck deck, Player player1, Player player2)
     {
+        dealCards(deck, player1);
+        dealCards(deck, player2);
+        handleWin(player1, player2);
 
     }
+
+    private void dealCards(Deck deck, Player player) {
+        System.out.println("Please, type card indexes that " + player.getName() + " will get");
+        Scanner scanner = new Scanner(System.in);
+
+        List<Card> chosen = new ArrayList<>();
+        List<Integer> indexes = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            int index = scanner.nextInt();
+            if (index < 1 || index > deck.getDeck().size()) {
+                System.out.println("Invalid index");
+                i--;
+                continue;
+            }
+            indexes.add(index - 1);
+        }
+
+        for (int i : indexes)
+            chosen.add(deck.getDeck().get(i));
+
+        for (var card : chosen) {
+            player.addCard(card);
+            deck.getDeck().remove(card);
+        }
+
+        System.out.println("Left cards in the deck");
+        deck.printDeck();
+    }
 }
+

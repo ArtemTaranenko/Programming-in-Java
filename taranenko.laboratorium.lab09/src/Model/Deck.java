@@ -23,8 +23,8 @@ public class Deck
 
     public void printDeck()
     {
-        for (var item: deck){
-            System.out.print(item + " ");
+        for (int i = 0; i<deck.size(); i++){
+            System.out.print((i+1) + ": " + deck.get(i) + " ");
         }
         System.out.println();
     }

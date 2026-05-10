@@ -58,17 +58,14 @@ public class CardController {
         boolean isFlush = suitCount.containsValue(5);
         boolean isStraight = isStraight(ranks);
 
-        // --- ROYAL FLUSH ---
-        if (isFlush && isStraight && ranks.get(0) == 14) {
+        if (isFlush && isStraight && ranks.getFirst() == 14) {
             return new HandValue(Combination.ROYALFLUSH, List.of());
         }
 
-        // --- STRAIGHT FLUSH ---
         if (isFlush && isStraight) {
             return new HandValue(Combination.STRAIGHTFLUSH, List.of(ranks.get(0)));
         }
 
-        // --- GROUPS ---
         List<Integer> fours = new ArrayList<>();
         List<Integer> threes = new ArrayList<>();
         List<Integer> pairs = new ArrayList<>();
@@ -87,31 +84,26 @@ public class CardController {
         pairs.sort(Collections.reverseOrder());
         singles.sort(Collections.reverseOrder());
 
-        // --- FOUR ---
         if (!fours.isEmpty()) {
             List<Integer> res = new ArrayList<>();
-            res.add(fours.get(0));
+            res.add(fours.getFirst());
             res.addAll(singles);
             return new HandValue(Combination.FOUR, res);
         }
 
-        // --- FULL HOUSE ---
         if (!threes.isEmpty() && !pairs.isEmpty()) {
             return new HandValue(Combination.FULLHOUSE,
-                    List.of(threes.get(0), pairs.get(0)));
+                    List.of(threes.getFirst(), pairs.getFirst()));
         }
 
-        // --- FLUSH ---
         if (isFlush) {
             return new HandValue(Combination.FLUSH, ranks);
         }
 
-        // --- STRAIGHT ---
         if (isStraight) {
-            return new HandValue(Combination.STRAIGHT, List.of(ranks.get(0)));
+            return new HandValue(Combination.STRAIGHT, List.of(ranks.getFirst()));
         }
 
-        // --- THREE ---
         if (!threes.isEmpty()) {
             List<Integer> res = new ArrayList<>();
             res.add(threes.get(0));
@@ -119,7 +111,6 @@ public class CardController {
             return new HandValue(Combination.THREE, res);
         }
 
-        // --- TWO PAIR ---
         if (pairs.size() >= 2) {
             List<Integer> res = new ArrayList<>();
             res.add(pairs.get(0));
@@ -128,7 +119,6 @@ public class CardController {
             return new HandValue(Combination.TWOPAIR, res);
         }
 
-        // --- ONE PAIR ---
         if (pairs.size() == 1) {
             List<Integer> res = new ArrayList<>();
             res.add(pairs.get(0));
@@ -136,15 +126,13 @@ public class CardController {
             return new HandValue(Combination.ONEPAIR, res);
         }
 
-        // --- HIGH CARD ---
         return new HandValue(Combination.HIGHCARD, ranks);
     }
 
     private boolean isStraight(List<Integer> ranks) {
-        // обычный случай
+
         for (int i = 0; i < ranks.size() - 1; i++) {
             if (ranks.get(i) - 1 != ranks.get(i + 1)) {
-                // проверка A-2-3-4-5
                 return ranks.equals(List.of(14, 5, 4, 3, 2));
             }
         }

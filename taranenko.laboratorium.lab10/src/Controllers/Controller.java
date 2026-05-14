@@ -52,6 +52,21 @@ public class Controller
                 .filter(fish -> fish.getLength() > 50)
                 .collect(Collectors.groupingBy(Fishing::getFisherName, Collectors.counting()))
                 .forEach((fisherName, count) -> System.out.println(fisherName + " -> " + count ));
+
+        //Information about total weight of caught pikes and pike-perches
+        System.out.println("\nInformation about total weight of caught pikes and pike-perches\n");
+        double count = fishingList.stream()
+                .filter(fish -> fish.getSpecies().equals("szczupak") || fish.getSpecies().equals("sandacz"))
+                .mapToDouble(Fishing::getWeight)
+                .reduce(0.0, Double::sum);
+        System.out.printf("Total weight of caught pikes and pike-perches: %.2f", count);
+
+        //Information about average fish length, how many fishes were caught and the longest and shortest fishes caught each day
+        System.out.println("\nInformation about average fish length, how many fishes were caught and the longest and shortest fishes caught each day\n");
+        fishingList.stream()
+                .collect(Collectors.groupingBy(Fishing::getDay, Collectors.summarizingDouble(Fishing::getLength)))
+                .forEach((Day, info) -> System.out.printf("\n" + Day + "\nAverage fish length: %.2f cm " +
+                        "Number of fishes: %d, min: %.2f, max: %.2f", info.getAverage(), info.getCount(), info.getMin(), info.getMax()));
     }
 
     private void printData(List<Fishing> fishingList)

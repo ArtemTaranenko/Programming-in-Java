@@ -1,0 +1,4 @@
+Michalski Tomasz 5 5 1973 KS_Warta 1 coach
+Piech Lech 2 8 1989 KS_Odra 1 coach
+Zych Jerzy 17 5 1975 KS_Wisla 2 coach
+Prusak Jan 25 8 1982 KS_Pilica 2 coach

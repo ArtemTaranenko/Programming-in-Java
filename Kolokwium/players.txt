@@ -1,0 +1,11 @@
+Jura Tomasz 20 1 2000 KS_Warta 1 player defender 2
+Bach Emil 11 11 1998 KS_Warta 1 player midfielder 7
+Kowalski Jan 12 12 2003 KS_Warta 1 player forward 13
+Pokora Tomasz 20 11 1995 KS_Odra 1 player defender 0
+Jasny Jan 13 3 1996 KS_Odra 1 player midfielder 4
+Kowalski Andrzej 11 5 1999 KS_Odra 1 player forward 7
+Krawczyk Oleg 1 2 2001 KS_Odra 1 player forward 11
+Mak Witold 3 12 1990 KS_Wisla 2 player goalkeeper 1
+Kowalczyk Kamil 19 4 2005 KS_Wisla 2 player midfielder 8
+Bak Damian 21 3 2004 KS_Wisla 2 player forward 17
+Bak Damian 22 2 2006 KS_Pilica 2 player forward 17

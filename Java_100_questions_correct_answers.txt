@@ -1,0 +1,200 @@
+1. Specjalna funkcjonalnosc JVM, która jest odpowiedzialna za zwalnianie nieużywanych już elementów z pamięci to:
+c. Garbage Collector.
+2. Wersje Javy, którym gwarantuje się długoletnie wsparcie posiadają oznaczenie:
+c. LTS.
+3. Plik .java może zawierać wiele klas, ale dozwolona jest tylko jedna klasa publiczna.
+b. prawda.
+4. Które z poniższych stwierdzeń jest błędne:
+b. wielkość znaków (małe, duże litery) nie ma znaczenia.
+5. W Javie instrukcja warunkowa ma następującą postać:
+c. if (warunek) { instrukcja }.
+6. Czy w Javie stosuje się destruktory?
+a. nie.
+7. Czy w Javie stosuje się przeciążanie metod?
+b. tak.
+8. W Javie elementy tablicy numerowane są od:
+a. 0.
+9. Wszystkie klasy w Javie dziedziczą po jednej klasie o nazwie:
+c. Object.
+10. Oddzielenie własnych klas od pozostałych realizowane jest poprzez umieszczanie ich w:
+c. pakietach.
+11. Klasa za pośrednictwem, której można dokonać odczytu danych wejściowych m.in. z konsoli czy pliku nazywa się:
+a. Scanner.
+12. Jeśli w podklasie chcemy wywołać kod przesłoniętej metody z nadrzędnej klasy, wówczas używamy słowa kluczowego:
+b. super.
+13. Czy w Javie można tworzyć instancje klas abstrakcyjnych?
+a. nie.
+14. Ile w Javie jest modyfikatorów dostępu służących do kontroli widoczności:
+b. 4.
+15. Zastosowanie instrukcji import aaa.bbb.* umożliwia:
+b. dostęp do wszystkich klas znajdujących się wyłącznie w lokalizacji aaa.bbb np. aaa.bbb.Cab.
+16. Czy instrukcja import w języku Java ma identyczną funkcjonalność i zastosowanie jak dyrektywa #include z języka C++:
+a. nie.
+17. Dziedzicznie w Javie wyraża się za pomocą słowa kluczowego:
+a. extends.
+18. Czy Java obsługuje dziedziczenia wielokrotne:
+a. nie.
+19. Obiekty tej klasy są podobne do tablic, z tą różnicą, że automatycznie dostosowując swoje rozmiary:
+a. ArrayList.
+20. Program, który może analizować funkcjonalność klas nazywa się:
+b. programem refleksyjnym.
+21. Wszystkie wyjątki są potomkami klasy:
+c. Throwable.
+22. Czy w Javie można przeciążyć operatory?
+a. nie.
+23. Deklarując metodę, która może spowodować wyjątek:
+c. throws.
+24. Czy w ramach jednego bloku try można stosować kilka klauzul catch:
+b. tak.
+25. Wskaż błędny sposób definiowania asercji:
+c. new assert (warunek).
+26. Do wyświetlania okna dialogowego służy metoda:
+b. showMessageDialog.
+27. PrintWriter("data.txt"), gdy plik istnieje:
+b. zostanie on usunięty, a program utworzy pusty plik o tej samej nazwie.
+28. FileWriter – gdy nie można otworzyć pliku:
+c. IOException.
+29. Wszystkie metody w interfejsach automatycznie są:
+c. publiczne.
+30. W klasie jednocześnie można implementować:
+b. wiele interfejsów.
+31. Interfejs niezawierający żadnej metody ani pola:
+c. znacznikowym.
+32. W klasie implementującej interfejs:
+c. należy zaimplementować wszystkie abstrakcyjne metody.
+33. Pola zadeklarowane w interfejsach:
+b. traktowane są jakby miały modyfikatory final i static.
+34. Do porównywania obiektów służy m.in.:
+a. Comparable.
+35. Operator lambda:
+c. ->.
+36. Interfejsy funkcyjne:
+b. posiadają dokładnie jedną metodę abstrakcyjną.
+37. Każda zmienna przechwycona w lambda musi być:
+a. finalna.
+38. Wyrażenie lambda można wykonać:
+a. dowolną liczbę razy.
+39. Wyrażenia lambda:
+a. mogą przyjmować argumenty i zwracać wartości.
+40. list.removeIf(e -> e == null) wykorzystuje:
+c. Predicate.
+41. Komparatory można łączyć za pomocą:
+c. thenComparing.
+42. Klasa wewnętrzna:
+a. jest zdefiniowana wewnątrz innej klasy.
+43. Tylko klasy wewnętrzne mogą być:
+c. statyczne.
+44. Klasa generyczna:
+a. ma co najmniej jedną zmienną typową.
+45. Czy można utworzyć egzemplarz generycznej tablicy:
+a. nie.
+46. Strukturą danych pozwalającą szybko wyszukiwać obiekty jest:
+c. tablica skrótów.
+47. Tasowanie listy:
+c. shuffle.
+48. Słowniki przechowują:
+b. pary klucz–wartość.
+49. Collection rozszerza:
+a. Iterable.
+50. Iterator zawiera metody:
+c. next, hasNext, remove, forEachRemaining.
+51. Kolekcja o uporządkowanej kolejności:
+c. TreeSet.
+52. W strumieniach wychodzi się od podejścia:
+a. co należy zrobić zamiast jak to zrobić.
+53. Przekształcanie elementów strumienia:
+b. mapowanie.
+54. Operacja łączna:
+a. kolejność stosowania operacji nie ma znaczenia.
+55. Dany strumień można wykorzystać:
+b. tylko raz.
+56. Tworzy nowy strumień z tyloma samymi lub mniejszą liczbą elementów:
+a. filter.
+57. Strumienie działają leniwie do:
+c. wykonania operacji kończącej.
+58. Ograniczenie strumienia nieskończonego:
+b. limit.
+59. Łączenie strumieni:
+a. concat.
+60. Po start() wątek przechodzi w stan:
+b. RUNNABLE.
+61. Demon to wątek:
+a. którego istnienie polega na służeniu innym wątkom.
+62. Ochrona przed jednoczesnym dostępem:
+c. synchronized i ReentrantLock.
+63. Wątek kończy działanie:
+c. po zakończeniu metody run.
+64. Biblioteka GUI z Java 1.0:
+a. AWT.
+65. Większość klas Swing zaczyna się od:
+b. J.
+66. Metoda wywoływana po wygenerowaniu zdarzenia:
+a. actionPerformed.
+67. Swing wykorzystuje wzorzec:
+a. MVC.
+68. Jedna opcja z wielu:
+b. JRadioButton.
+69. Akceleratory to:
+c. skróty klawiszowe.
+70. CENTER/NORTH:
+b. BorderLayout.
+71. Obsługa kliknięcia przycisku:
+a. ActionListener.
+72. Łączenie z bazami danych:
+a. JDBC.
+73. INSERT/DELETE:
+b. executeUpdate.
+74. executeQuery zwraca:
+a. ResultSet.
+75. Ustawienia Maven:
+b. pom.xml.
+76. Utworzenie nowego obiektu:
+c. new.
+77. Domyślna wartość boolean pola klasy:
+b. false.
+78. this odnosi się do:
+b. bieżącego obiektu.
+79. Uniemożliwia dziedziczenie:
+b. final.
+80. String jest:
+a. immutable.
+81. Długość String:
+c. length().
+82. Typ prosty:
+c. double.
+83. Porównywanie referencji:
+b. ==.
+84. Wykonywana niezależnie od wyjątku:
+c. finally.
+85. Czy try może występować bez catch:
+b. tak, jeśli występuje finally.
+86. @Override:
+b. przesłania metodę klasy nadrzędnej.
+87. Bez duplikatów:
+c. HashSet.
+88. size():
+b. liczbę elementów kolekcji.
+89. Operacja kończąca strumienia:
+c. forEach().
+90. Runnable zawiera:
+b. run().
+91. Wstrzymanie bieżącego wątku:
+b. sleep().
+92. Jednoliniowy tekst:
+b. JTextField.
+93. Wyświetlenie JFrame:
+c. setVisible(true).
+94. Connection reprezentuje:
+b. połączenie z bazą danych.
+95. Maven służy głównie do:
+a. zarządzania projektami i zależnościami.
+96. Zachowuje kolejność dodawania:
+b. ArrayList.
+97. static oznacza:
+a. należy do klasy, a nie do konkretnego obiektu.
+98. Tekstowa reprezentacja obiektu:
+c. toString().
+99. Overloading:
+a. ta sama nazwa, różne listy parametrów.
+100. Poprawny typ generyczny:
+a. ArrayList<String>.

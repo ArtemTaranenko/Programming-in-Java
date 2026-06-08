@@ -1,0 +1,97 @@
+15.
+Zastosowanie instrukcji import aaa.bbb.* umożliwia:
+a) dostęp do wszystkich klas znajdujących się w gałęzi rozpoczynającej od aaa.bbb np. aaa.bbb.ccc.Dab,
+b) dostęp do wszystkich klas znajdujących się wyłącznie w lokalizacji aaa.bbb np. aaa.bbb.Cab,
+c) żadna z powyższych odpowiedzialna.
+37.
+Każda zmienna przechwycona w wyrażeniu lambda musi być:
+a) finalna,
+b) typem prostym,
+c) zainicjalizowana.
+41.
+Komparatory można łączyć za pomocą metody:
+a) collect,
+b) comparing,
+c) thenComparing.
+45.
+Czy można utworzyć egzemplarza generycznej tablicy:
+a) nie,
+b) tak.
+46.
+Strukturą danych pozwalającą szybko wyszukiwać obiekty jest:
+a) interfejs Search,
+b) struktura SetObject,
+c) tablica skrótów.
+54.
+Operacja łączna to taka, w której:
+a) kolejność stosowania operacji nie ma znaczenia,
+b) następuje zsumowanie wartości elementów biorących udział w operacji,
+c) operacji dokonuje się z zachowaniem kolejności elementów.
+61.
+Demon to taki wątek:
+a) którego istnienie polega na służeniu innym wątkom,
+b) który ma najwyższy priorytet,
+c) który przejmuje zasoby od innych wątków oraz wprowadza je w stan TERMINATED.
+63.
+Wątek kończy działanie w chwili:
+a) wywołania metody interrupt,
+b) zamknięcie danego wątku następuje dopiero w momencie zamknięcia programu, wcześniej jest to niemożliwe,
+c) zwrócenia przez jego metodę run wartości w wyniku wywołania instrukcji return.
+64.
+Biblioteka udostępniona w Java 1.0 do programowania GUI to:
+a) ATW,
+b) GIT,
+c) JGUI.
+67.
+W bibliotece Swing wykorzystuje się wzorzec:
+a) MVC,
+b) MVP,
+c) Singleton.
+69.
+Akceleratory to:
+a) metody wspomagające procesy graficzne,
+b) panele łączące obiekty związane z daną jedną funkcjonalnością,
+c) skróty klawiszowe.
+71.
+Do obsługi zdarzeń np. kliknięcia danego przycisku wykorzystuje się interfejs:
+a) ActionListener,
+b) FocusListener,
+c) JEvent.
+72.
+Pakiet umożliwiający łączenie się z bazami danych oraz wykonywanie zapytań i aktualizację danych w języku SQL to:
+a) JDBC,
+b) DBJ,
+c) JSQL.
+73.
+Operacje języka SQL, takie jak np. INSERT czy DELETE wykonuje się za pośrednictwem metody:
+a) execute,
+b) executeUpdate,
+c) executeSQL.
+74.
+Metoda executeQuery zwraca obiekt typu:
+a) ResultSet,
+b) ResultSQL,
+c) ResultQuery.
+83.
+Operator służący do porównywania referencji obiektów to:
+a) equals(),
+b) ==,
+c) compareTo().
+86.
+Adnotacja @Override oznacza, że metoda:
+a) przeciąża metodę klasy,
+b) przesłania metodę klasy nadrzędnej,
+c) jest metodą statyczną.
+93.
+Która metoda klasy JFrame powoduje wyświetlenie okna?
+a) display(true),
+b) showWindow(),
+c) setVisible(true).
+96.
+Który z poniższych typów kolekcji przechowuje elementy w kolejności ich dodawania?
+
+a) HashSet,
+
+b) ArrayList,
+
+c) HashMap.
